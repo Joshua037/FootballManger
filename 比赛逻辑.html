@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>比赛逻辑</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/比赛逻辑/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/比赛逻辑/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6480" class="ax_default _一级标题">
+        <div id="u6480_div" class=""></div>
+        <div id="u6480_text" class="text ">
+          <p><span>比赛逻辑设计</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6481" class="ax_default _文本段落">
+        <div id="u6481_div" class=""></div>
+        <div id="u6481_text" class="text ">
+          <p><span>结合当前版本针对比赛环节的模式采取仿照RPG游戏的回合制对战机制，将两队数值进行PK，从而获得比赛结果以及比赛比分和部分球场比赛事件场景</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6482" class="ax_default _一级标题">
+        <div id="u6482_div" class=""></div>
+        <div id="u6482_text" class="text ">
+          <ul><li style=""><span>比赛模拟流程</span></li></ul>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6483" class="ax_default _文本段落">
+        <div id="u6483_div" class=""></div>
+        <div id="u6483_text" class="text ">
+          <ul><li style=""><span>玩家通过天梯赛列表中选中某个对手进行比赛；</span></li></ul><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 根据双方选择得阵型以及战术先行进行各个位置得人数计算以及战术加成</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6484" class="ax_default _文本段落">
+        <div id="u6484_div" class=""></div>
+        <div id="u6484_text" class="text ">
+          <ul><li style=""><span>基于双方上场得队员各项参数核算双方得HP血量值</span></li></ul>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6485" class="ax_default _文本段落">
+        <div id="u6485_div" class=""></div>
+        <div id="u6485_text" class="text ">
+          <ul><li style=""><span>首先根据双方上场得队员配合阵型中不同位置得人数参数计算双方得反应速度</span></li></ul><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 虚拟一根行动条，双方在行动条上进行唯一，每到达一次终点均可发起一次攻击</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="color:#F59A23;"> 例：行动条长度为100；A得反应速度为10；B得反应速度为15</span></p><p><span style="color:#F59A23;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A和B分别开始各自累加计算，A每次加10，B每次加15，直至累加至100（或大于100）</span></p><p><span style="color:#F59A23;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 当B首先发起进攻时应为105，发起进攻逻辑时A将暂停计算，直至攻击流程走完继续计算</span></p><p><span style="color:#F59A23;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 当攻击逻辑流程完成后，B归零从新计算，A从暂停点继续计算</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6486" class="ax_default _文本段落">
+        <div id="u6486_div" class=""></div>
+        <div id="u6486_text" class="text ">
+          <ul><li style=""><span>进入攻击逻辑流程，先分别核算攻/守双方各自得闪避率和命中率</span></li></ul><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 命中率-闪避率=命中差值</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 命中差值区间为计算当前进攻是否命中得数值区间</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6487" class="ax_default _文本段落">
+        <div id="u6487_div" class=""></div>
+        <div id="u6487_text" class="text ">
+          <ul><li style=""><span>命中差值即命中范围，命中差值以百分比得形式为结果</span></li><li style=""><span>&nbsp;攻击过程中决定是否命中得机制为：计算0~100的随机数</span></li><li style=""><span>该数字在命中范围内，防守方将受到攻击，若该数字未在命中区间内，防守方将闪避成功</span></li><li style=""><span>命中率-闪避率为正值时，命中区间为0~命中差值</span></li></ul><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 命中率-闪避率为负值时，命中区间为</span><span style="color:#000000;">1%~5%之间取随机数</span></p><p><span style="color:#D9001B;">※&nbsp; 命中率和闪避率决定持球方在射门前是否被抢断</span></p><p><span>&nbsp;&nbsp; &nbsp; </span><span style="color:#F59A23;">&nbsp; 例：∵ B攻击A，B命中率为75%，A闪避率为30%，命中差值为45%</span></p><p><span style="color:#F59A23;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; A攻击B，A命中率为60%，B闪避率为65%，命中差值将在1%~5%之间取随机数</span></p><p><span style="color:#F59A23;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ∴ B攻击A的命中区间为0~45 ，A攻击B的命中区间在5%以内的随机数确定</span></p><p><span style="color:#F59A23;"><br></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6488" class="ax_default _文本段落">
+        <div id="u6488_div" class=""></div>
+        <div id="u6488_text" class="text ">
+          <ul><li style=""><span>当判定当前防守方闪避失败，进攻方进攻有效时则继续推进进攻的逻辑流程</span></li><li style=""><span>当判定当前防守方闪避成功，进攻方进攻无效时则停止当前进攻逻辑返回计算攻击进度条阶段重新开始</span></li></ul>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6489" class="ax_default _文本段落">
+        <div id="u6489_div" class=""></div>
+        <div id="u6489_text" class="text ">
+          <ul><li style=""><span>分别计算攻/守双方的暴击率</span></li></ul><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 每轮攻击时均需计算随机数，该随机数若在暴击率范围内（即0~暴击率）</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 进攻方的攻击将附加魔法攻击力</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 防守方的防守将附加魔法防守值</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6490" class="ax_default _文本段落">
+        <div id="u6490_div" class=""></div>
+        <div id="u6490_text" class="text ">
+          <ul><li style=""><span>确定攻/守双方总攻击值和总防守值后</span></li><li style=""><span>每次进攻则生成一个随机数作为射门随机数，基于双方总进攻值和总防守值形成一个虚拟球门值，进攻和防守的差值范围取随机数来作为防守值起点开始计算射门值所在位置</span></li></ul>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6491" class="ax_default _文本段落">
+        <div id="u6491_div" class=""></div>
+        <div id="u6491_text" class="text ">
+          <ul><li style=""><span>完成攻击计算后刷新HP</span></li><li style=""><span>分别计算进攻/防守方的连击率和反击率</span></li><ul><li style=""><span>当连击率和反击率均被触发则有限触发连击率；</span></li><li style=""><span>触发连击率每次进攻仅触发一次；</span></li></ul><li style=""><span>若对应在相应范围内则对应方向对方发起攻击</span></li></ul>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6492" class="ax_default _一级标题">
+        <div id="u6492_div" class=""></div>
+        <div id="u6492_text" class="text ">
+          <ul><li style=""><span>流程对应事件场景</span></li></ul>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6493" class="ax_default primary_button">
+        <div id="u6493_div" class=""></div>
+        <div id="u6493_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆) -->
+      <div id="u6494" class="ax_default ellipse">
+        <img id="u6494_img" class="img " src="images/首页_个人中心/u2165.svg"/>
+        <div id="u6494_text" class="text ">
+          <p><span>A</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆) -->
+      <div id="u6495" class="ax_default ellipse">
+        <img id="u6495_img" class="img " src="images/比赛逻辑/u6495.svg"/>
+        <div id="u6495_text" class="text ">
+          <p><span>B</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u6496" class="ax_default line">
+        <img id="u6496_img" class="img " src="images/比赛逻辑/u6496.svg"/>
+        <div id="u6496_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u6497" class="ax_default line">
+        <img id="u6497_img" class="img " src="images/比赛逻辑/u6497.svg"/>
+        <div id="u6497_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6498" class="ax_default label">
+        <div id="u6498_div" class=""></div>
+        <div id="u6498_text" class="text ">
+          <p><span>10</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6499" class="ax_default label">
+        <div id="u6499_div" class=""></div>
+        <div id="u6499_text" class="text ">
+          <p><span>15</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6500" class="ax_default label">
+        <div id="u6500_div" class=""></div>
+        <div id="u6500_text" class="text ">
+          <p><span>100</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆) -->
+      <div id="u6501" class="ax_default ellipse">
+        <img id="u6501_img" class="img " src="images/比赛逻辑/u6501.svg"/>
+        <div id="u6501_text" class="text ">
+          <p><span>攻击</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆) -->
+      <div id="u6502" class="ax_default ellipse">
+        <img id="u6502_img" class="img " src="images/比赛逻辑/u6501.svg"/>
+        <div id="u6502_text" class="text ">
+          <p><span>起始</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u6503" class="ax_default line">
+        <img id="u6503_img" class="img " src="images/比赛逻辑/u6503.svg"/>
+        <div id="u6503_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (垂直线) -->
+      <div id="u6504" class="ax_default line">
+        <img id="u6504_img" class="img " src="images/比赛逻辑/u6504.svg"/>
+        <div id="u6504_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (垂直线) -->
+      <div id="u6505" class="ax_default line">
+        <img id="u6505_img" class="img " src="images/比赛逻辑/u6504.svg"/>
+        <div id="u6505_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6506" class="ax_default label">
+        <div id="u6506_div" class=""></div>
+        <div id="u6506_text" class="text ">
+          <p><span>虚拟球门值=max（A总攻击，B总防守）+max（A总攻击-B总防守，B总防守-A总攻击）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6507" class="ax_default primary_button">
+        <div id="u6507_div" class=""></div>
+        <div id="u6507_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6508" class="ax_default primary_button">
+        <div id="u6508_div" class=""></div>
+        <div id="u6508_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6509" class="ax_default primary_button">
+        <div id="u6509_div" class=""></div>
+        <div id="u6509_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6510" class="ax_default label">
+        <div id="u6510_div" class=""></div>
+        <div id="u6510_text" class="text ">
+          <p><span>B总防守值</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6511" class="ax_default label">
+        <div id="u6511_div" class=""></div>
+        <div id="u6511_text" class="text ">
+          <p><span>A总攻击值</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6512" class="ax_default label">
+        <div id="u6512_div" class=""></div>
+        <div id="u6512_text" class="text ">
+          <p><span>A与B的差值</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (垂直线) -->
+      <div id="u6513" class="compound ax_default line" data-height="30" data-width="1" CompoundMode="true">
+        <img id="u6513_img" class="singleImg img " src="images/比赛逻辑/u6513.svg"/>
+        <div id="u6513p000" class="ax_vector_shape" WidgetTopLeftX="-0.4166666666666667" WidgetTopLeftY="0.25" WidgetTopRightX="-0.4166666666666667" WidgetTopRightY="0" WidgetBottomLeftX="0.4166666666666667" WidgetBottomLeftY="0.25" WidgetBottomRightX="0.4166666666666667" WidgetBottomRightY="0">
+          <img id="u6513p000_img" class="img " src="images/比赛逻辑/u6513p000.svg"/>
+        </div>
+        <div id="u6513p001" class="ax_vector_shape" WidgetTopLeftX="-0.13636363636121793" WidgetTopLeftY="0" WidgetTopRightX="-0.13636363636121793" WidgetTopRightY="-0.04999999999973454" WidgetBottomLeftX="1.2272727272751458" WidgetBottomLeftY="0" WidgetBottomRightX="1.2272727272751458" WidgetBottomRightY="-0.04999999999973454">
+          <img id="u6513p001_img" class="img " src="images/比赛逻辑/u6513p001.svg"/>
+        </div>
+        <div id="u6513p002" class="ax_vector_shape" WidgetTopLeftX="-0.25" WidgetTopLeftY="-7.75" WidgetTopRightX="0" WidgetTopRightY="-7.75" WidgetBottomLeftX="-0.25" WidgetBottomLeftY="-0.25" WidgetBottomRightX="0" WidgetBottomRightY="-0.25">
+          <img id="u6513p002_img" class="img " src="images/比赛逻辑/u6513p002.svg"/>
+        </div>
+        <div id="u6513_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6514" class="ax_default label">
+        <div id="u6514_div" class=""></div>
+        <div id="u6514_text" class="text ">
+          <p><span>AB差值随机数</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u6515" class="ax_default icon">
+        <img id="u6515_img" class="img " src="images/比赛逻辑/u6515.svg"/>
+        <div id="u6515_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6516" class="ax_default label">
+        <div id="u6516_div" class=""></div>
+        <div id="u6516_text" class="text ">
+          <p><span>射门随机数</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u6517" class="ax_default _文本段落">
+        <div id="u6517_div" class=""></div>
+        <div id="u6517_text" class="text ">
+          <ul><li style=""><span style="color:#F59A23;">射门随机数在B总防守值与A攻击值重合范围内，该球被守门员守住；</span></li><li style=""><span style="color:#8400FF;">射门随机数在A总攻击值未被B防守值覆盖范围内，该球进球；</span></li><li style=""><span style="color:#D9001B;">射门随机数在AB差值范围内，该球被踢飞</span></li><li style=""><span style="color:#000000;">HP掉血值=射门随机数与B总防守值得差值</span></li><ul><li style=""><span style="color:#000000;">射门随机数＜B总防守值最小值，HP掉血为B总防守值-射门随机数</span></li><li style=""><span style="color:#000000;">射门随机数＞B总防守值最大值，HP掉血为射门随机数-B总防守值</span></li></ul></ul>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u6518" class="ax_default _图片_">
+        <img id="u6518_img" class="img " src="images/比赛逻辑/u6518.png"/>
+        <div id="u6518_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u6519" class="ax_default _图片_">
+        <img id="u6519_img" class="img " src="images/比赛逻辑/u6519.png"/>
+        <div id="u6519_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u6520" class="ax_default _图片_">
+        <img id="u6520_img" class="img " src="images/比赛逻辑/u6520.png"/>
+        <div id="u6520_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

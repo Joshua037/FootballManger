@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>数据调整需求</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/数据调整需求/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.7.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/数据调整需求/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7665" class="ax_default _一级标题">
+        <div id="u7665_div" class=""></div>
+        <div id="u7665_text" class="text ">
+          <p><span>游戏数据需求分析</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7666" class="ax_default _一级标题">
+        <div id="u7666_div" class=""></div>
+        <div id="u7666_text" class="text ">
+          <p><span>俱乐部数据</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7667" class="ax_default _一级标题">
+        <div id="u7667_div" class=""></div>
+        <div id="u7667_text" class="text ">
+          <p><span>俱乐部精力</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7668" class="ax_default _一级标题">
+        <div id="u7668_div" class=""></div>
+        <div id="u7668_text" class="text ">
+          <p><span>俱乐部升级</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7669" class="ax_default _文本段落">
+        <div id="u7669_div" class=""></div>
+        <div id="u7669_text" class="text ">
+          <p style="font-size:13px;"><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;">俱乐部精力值最初值为100，游戏中以百分比形式显示，通过玩家进行比赛和进行训练消耗精力值，而通过不参加比赛以及不参加训练的时间可逐步恢复精力值</span></p><p style="font-size:13px;"><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;">随着俱乐部的升级，每次比赛固定消耗精力10点，恢复精力值所需的时间也会逐步减少</span></p><p style="font-size:12px;"><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;font-size:13px;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><span style="font-family:'微软雅黑 Bold Oblique', '微软雅黑 Bold', '微软雅黑', sans-serif;font-weight:700;font-style:oblique;font-size:14px;">&nbsp; 精力增长计算公式：当前级别精力值=当前级别^2+增长系数&nbsp;&nbsp; </span><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;color:#D9001B;">※ 暂定增长系数为99</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7670" class="ax_default _文本段落">
+        <div id="u7670_div" class=""></div>
+        <div id="u7670_text" class="text ">
+          <p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;">俱乐部升级当前版本影响部分仅为精力的消耗和回复，后续会根据俱乐部等级部分功能的开放要求，俱乐部当前版本获取经验值的途径为完成新手引导中的操作，新手引导后，仅可以通过比赛获得经验值，每次比赛胜利根据特定条件获得100~300不等的经验值，失败则可获得10~30不等的经验值</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;">所需经验公式为：</span><span style="font-family:'微软雅黑 Bold', '微软雅黑', sans-serif;font-weight:700;">升级所需经验=（当前级别-阶段初始级别）^阶段系数×跨度系数</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;">当玩家俱乐部级别升至51级进入第三阶段后，提高升级难度原公式基础增加附加值：</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-family:'微软雅黑 Bold', '微软雅黑', sans-serif;font-weight:700;"> 升级所需经验=（当前级别-阶段初始级别）^阶段系数×跨度系数+跨度系数×（当前级别-阶段初始级别）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7671" class="ax_default _文本段落">
+        <div id="u7671_div" class=""></div>
+        <div id="u7671_text" class="text ">
+          <p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">阶段一：阶段系数：1；跨度系数100</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">1~20级公式：</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">（</span><span style="font-family:'Arial Cursiva', 'Arial Normal', 'Arial', sans-serif;font-style:italic;">当前级-0）×100</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">新用户通过升级直线快速升级，结合精力限制和用户初期游戏的操作引导</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">预计一天进行12场比赛，在7天内可完成前20级的升级</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">阶段二：阶段系数：2；跨度系数200</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">21~50级公式：</span></p><p><span style="font-family:'Arial Cursiva', 'Arial Normal', 'Arial', sans-serif;font-style:italic;">（当前级-20）^2×200</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">用户趋于成熟，维持用户忠诚度，通过升级延长用户在游戏中参加比赛的数量来激励用户升级</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">阶段三：阶段系数：3；跨度系数为300</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">51~100级公式：</span></p><p><span style="font-family:'Arial Cursiva', 'Arial Normal', 'Arial', sans-serif;font-style:italic;">(当前级-50)^3*300+300*(当前级-50)</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;">此阶段用户趋于两级分化，部分用户对于游戏建立稳固的忠诚度，另部分用户对于本产品的生命周期接近尾声，针对此两类用户俱乐部等级已经失去吸引力的意义，俱乐部等级完全用户针对后续运营活动的参与标准，例如甲级组，乙级组划分等作用，因此提高升级长度</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;"><br></span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;color:#D9001B;">※ 目前比赛奖励经验逻辑为当前基础类比赛</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;color:#D9001B;">胜利获得100~300经验值</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;color:#D9001B;">失败获得10~30经验值</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;color:#D9001B;">并根据需求中的等级差战力差基于额外的经验加成</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;color:#D9001B;">后续增加杯赛，巡回赛等玩法后针对比赛赛制同样会更新对应的经验奖励</span></p><p><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-style:normal;color:#D9001B;">公式中的阶段系数和跨度系数可通过后台进行调整</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7672" class="ax_default _一级标题">
+        <div id="u7672_div" class=""></div>
+        <div id="u7672_text" class="text ">
+          <p><span>球员数据</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7673" class="ax_default _一级标题">
+        <div id="u7673_div" class=""></div>
+        <div id="u7673_text" class="text ">
+          <p><span>球员升级</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7674" class="ax_default _文本段落">
+        <div id="u7674_div" class=""></div>
+        <div id="u7674_text" class="text ">
+          <p><span>根据球员的稀有度，球员分别为N,R,SR,SSR,所对应的星级阶段也不同，稀有度高的球员可以通过突破星级限制进行继续升级，星级对应的上限为：</span></p><p><span>1星：20级</span></p><p><span>2星：50级</span></p><p><span>3星：90级</span></p><p><span>4星：140级</span></p><p><span>5星：200级</span></p><p><span>相应球员在升级过程中对应的各项指标也会有所提升</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7675" class="ax_default _一级标题">
+        <div id="u7675_div" class=""></div>
+        <div id="u7675_text" class="text ">
+          <p><span>球员获取经验值</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7676" class="ax_default _文本段落">
+        <div id="u7676_div" class=""></div>
+        <div id="u7676_text" class="text ">
+          <p><span>球员可以通过比赛和训练两个常规操作获得经验值，同样后期版本中也会增加更多的比赛类型给予球员额外的经验值，当前版本仅考虑比赛获得经验值</span></p><p><span>球员参加比赛，即上场即可获得30xp经验值</span></p><p><span>半场额外经验10xp，即只上半场上场可得40xp，上下半场都上场得50xp</span></p><p><span>成功传球，参与传球的两名队员各得5xp；</span></p><p><span>助攻，即射门前最后一个传球传球队员得8xp，接球队员得3xp</span></p><p><span>成功抢断，防守球员得10xp，进攻球员得-3xp</span></p><p><span>成功射门，射门球员得10xp，守门员得-3xp</span></p><p><span>成功守门，守门员得10xp，射门球员得-3xp</span></p><p><span>成功穿越，进攻球员得10xp，防守球员得-3xp</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7677" class="ax_default _一级标题">
+        <div id="u7677_div" class=""></div>
+        <div id="u7677_text" class="text ">
+          <p><span>球员升级数值变化</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7678" class="ax_default _文本段落">
+        <div id="u7678_div" class=""></div>
+        <div id="u7678_text" class="text ">
+          <p><span>球员在升级的过程中相应的数值会进行增长，而每个球员都包含一个成长值，成长值在1~10区间内根据稀有度和球员品质可进行随机或指定设置成长值</span></p><p><span>N级球员成长值[1，3]</span></p><p><span>R级球员成长值[2，5]</span></p><p><span>SR级球员成长值[4，8]</span></p><p><span>SSR级球员成长值[5，10]</span></p><ul><li style=""><span>球员精力值的计算公式为：上级体力值值+α×当前级别×(成长值^β)</span></li></ul><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; ※ 可通过后台调整此两个值α控制体力值值增长的幅度；β控制成长值的加成作用，当前α与β均被定义为0.1</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 每场比赛消耗队员20体力值</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 1~50级，需要12h恢复100%体力值</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 51~100级，需要8h恢复100%体力值</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 100~200级，需要6h恢复100%体力值</span></p><p><span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 以此具体球员等级和精力值计算5分钟恢复体力值并在页面刷新</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7679" class="ax_default _文本段落">
+        <div id="u7679_div" class=""></div>
+        <div id="u7679_text" class="text ">
+          <ul><li style=""><span>球员各项自身数值值的计算公式为：上一级技术值+α×成长系数×位置系数×当前等级+随机数</span></li><ul><li style=""><span>常亮α可通过后台进行设置主要调整增长幅度，当前可设置为0.01</span></li><li style=""><span>随机数为±5，同样可通过后台设置</span></li><li style=""><span>技术初始值</span></li><ul><li style=""><span>N级球员0.1~0.4</span></li><li style=""><span>R级球员0.3~0.7</span></li><li style=""><span>SR级球员0.5~0.8</span></li><li style=""><span>SSR级球员0.7~1</span></li></ul><li style=""><span>球员基础数值计算时位置系数为0.5</span></li><li style=""><span>球员技术数值计算时引入位置系数</span></li><ul><li style=""><span>前场球员升级时针对射门类、带球类数值参与位置系数计算</span></li><ul><li style=""><span>N级球员位置系数为1</span></li><li style=""><span>R级球员位置系数为1.1</span></li><li style=""><span>SR级球员位置系数为1.2</span></li><li style=""><span>SSR级球员位置系数为1.3</span></li></ul><li style=""><span>中场球员升级时针对传球类、带球类数值参与位置系数计算</span></li><ul><li style=""><span>N级球员位置系数为1</span></li><li style=""><span>R级球员位置系数为1.1</span></li><li style=""><span>SR级球员位置系数为1.2</span></li><li style=""><span>SSR级球员位置系数为1.3</span></li></ul><li style=""><span>后场球员升级时针对抢断类、传球类数值参与位置系数计算</span></li><ul><li style=""><span>N级球员位置系数为1</span></li><li style=""><span>R级球员位置系数为1.1</span></li><li style=""><span>SR级球员位置系数为1.2</span></li><li style=""><span>SSR级球员位置系数为1.3</span></li></ul><li style=""><span>守门员员升级时针对守门数值参与位置系数计算</span></li><ul><li style=""><span>N级球员位置系数为1</span></li><li style=""><span>R级球员位置系数为1.1</span></li><li style=""><span>SR级球员位置系数为1.2</span></li><li style=""><span>SSR级球员位置系数为1.3</span></li></ul></ul></ul></ul>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u7680" class="ax_default _图片_">
+        <img id="u7680_img" class="img " src="images/数据调整需求/u7680.png"/>
+        <div id="u7680_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u7681" class="ax_default _图片_">
+        <img id="u7681_img" class="img " src="images/数据调整需求/u7681.png"/>
+        <div id="u7681_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u7682" class="ax_default _图片_">
+        <img id="u7682_img" class="img " src="images/数据调整需求/u7682.png"/>
+        <div id="u7682_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u7683" class="ax_default _文本段落">
+        <div id="u7683_div" class=""></div>
+        <div id="u7683_text" class="text ">
+          <p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;">根据竞品top eleven游戏中针对球员升级经验的参考，采取指数经验值，并且结合不同稀有度升星后的阶段性升级调整，基于要求在初期可以迅速培养玩家对于游戏的成就感，因此球员升级所需经验值的计算公式为下：</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;"><br></span></p><p><span style="font-family:'微软雅黑 Bold Oblique', '微软雅黑 Bold', '微软雅黑', sans-serif;font-weight:700;font-style:oblique;">常亮α×[(稀有度系数^(常量β×所升级数)]</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;"><br></span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;">目前α=80.4；β=0.1</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;">N稀有度系数=3</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;">R稀有度系数=2</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;">SR稀有度系数=1.5</span></p><p><span style="font-family:'微软雅黑', sans-serif;font-weight:400;font-style:normal;">SSR稀有度系数=1.3</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片) -->
+      <div id="u7684" class="ax_default _图片_">
+        <img id="u7684_img" class="img " src="images/数据调整需求/u7684.png"/>
+        <div id="u7684_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
